@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+/* Add angular 6 material theme and some components */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.metal-text-align-center{
+    text-align: center;
+}
+
+.metal-button-header-group{
+    display:block
+}
+
+.metal-button-header{
+    display:inline-block;
+}
