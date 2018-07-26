@@ -1,5 +1,39 @@
 <app-header></app-header>
-<p>
-  provolochnaia works!
-</p>
+
+<h3>Входные параметры:</h3>
+<br />
+<form class="example-container">
+
+  <mat-form-field>
+    <input matInput min="1" value="1" oninput="validity.valid||(value='1');" (change)="onChangeRepeat($event.target.value)" [ngModelOptions]="{standalone: true}"
+      [(ngModel)]=" model.inputFieldValue" placeholder="Периметр контура реза" type="number">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="Марка стали" [(ngModel)]="model.markSelect" [ngModelOptions]="{standalone: true}">
+      <mat-option value="2">Цветные металлы</mat-option>
+      <mat-option value="1.5">Твердые сплавы</mat-option>
+      <mat-option value="1">Инструмментные стали</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="Толщина стали" [(ngModel)]="model.tolshinaSelect" [ngModelOptions]="{standalone: true}">
+
+      <mat-option value="10">10 мм</mat-option>
+      <mat-option value="5">20 мм</mat-option>
+      <mat-option value="2.5">30 мм</mat-option>
+      <mat-option value="1.5">40 мм</mat-option>
+      <mat-option value="1">50 мм</mat-option>
+      <mat-option value="0.8">60 мм</mat-option>
+      <mat-option value="0.5">80 мм</mat-option>
+      <mat-option value="0.3">90 мм</mat-option>
+      <mat-option value="0.1">100 мм</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+</form>
+<br />
+
+<p>Стоимость (грн): {{2 | exponentialStrength: model.inputFieldValue : model.markSelect: model.tolshinaSelect}}</p>
 <app-footer></app-footer>
