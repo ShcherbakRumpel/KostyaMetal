@@ -1,0 +1,10 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer section {
+    widows: 50%;
+    margin-right: 50px;
+}
