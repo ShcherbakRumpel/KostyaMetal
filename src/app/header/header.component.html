@@ -1,21 +1,24 @@
-<div class="metal-text-align-center metal-button-header-group">
-  <div class="metal-button-header">
-    <button  [routerLink]="['/home']" mat-raised-button>Home</button>
-  </div>
-
-  <div class="metal-button-header">
-    <button  [routerLink]="['/about']" mat-raised-button>About</button>
-  </div>
-
-  <div class="metal-button-header">
-    <button  [routerLink]="['/contact']" mat-raised-button>Contact</button>
-  </div>
-
-  <div class="metal-button-header">
-    <button  [routerLink]="['/provolochnaia']" mat-raised-button>Provolochnaia</button>
-  </div>
-
-  <div class="metal-button-header">
-    <button [routerLink]="['/proshivnaia']" mat-raised-button>Proshivnaia</button>
-  </div>
+<div class="nav">
+  <ul>
+    <li><a [routerLink]="['/home']">Главная</a></li>
+    <li><a [routerLink]="['/about']">О нас</a></li>
+    <li><a [routerLink]="['/proshivnaia']">Прошивная</a></li>
+    <li><a [routerLink]="['/provolochnaia']">Проволочная</a></li>
+    <li><a [routerLink]="['/contact']">Контакты</a></li>
+  </ul>
 </div>
+<header>
+  <div class="burger-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <a href="#" class="logo-header"><img src="../../assets/img/logo.png" alt="logo site"></a>
+  <nav class="menu">
+    <a [routerLink]="['/home']" class="active">Главная</a>
+    <a [routerLink]="['/about']">О нас</a>
+    <a [routerLink]="['/proshivnaia']">Прошивная</a>
+    <a [routerLink]="['/provolochnaia']">Проволочная</a>
+    <a [routerLink]="['/contact']">Контакты</a>
+  </nav>
+</header>
