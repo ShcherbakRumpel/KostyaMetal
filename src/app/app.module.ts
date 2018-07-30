@@ -52,6 +52,8 @@ import {
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule } from '@angular/cdk/tree';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ExponentialStrengthPipe } from './provolochnaia/pipe/calc.pipe';
+import { SharedModule } from './provolochnaia/pipe/shared.module';
 const appRoutes: Routes = [
   {
     path: 'home',
@@ -93,6 +95,8 @@ const appRoutes: Routes = [
     HeaderComponent
   ],
   imports: [
+    SharedModule,
+    MatInputModule,
     CdkTableModule,
     CdkTreeModule,
     MatAutocompleteModule,
