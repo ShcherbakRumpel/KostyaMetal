@@ -183,7 +183,7 @@ nav.menu {
 
 .video-bg {
     min-height: 400px;
-    background-image: url("assets/img/video-bg.jpg");
+    background-image: url("../src/assets/img/video-bg.jpg");
     background-position: center center;
     -webkit-background-size: cover;
     background-size: cover;

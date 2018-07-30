@@ -1,5 +1,5 @@
-<app-header></app-header>
-<div class="main common">
+<app-header (notify)="getData($event)"></app-header>
+<div class="main common" [ngClass]="{'page-left': isBurgerMenuOpened}">
     <div class="video-bg">
         <div class="slice-1"></div>
         <div class="slice-2"></div>
@@ -45,9 +45,10 @@
 
         <div class="finished-work">
             <h2>Наши реализованные работы</h2>
-            <div class="works-slider">
+            <!-- <div class="works-slider">
                 <img src="../../assets/img/slider-bg.jpg" alt="" style="max-width: 100%;">
-            </div>
+            </div> -->
+            <app-slider></app-slider> <!-- here is calling angular component-->
         </div>
     </div>
     <div class="feedback">

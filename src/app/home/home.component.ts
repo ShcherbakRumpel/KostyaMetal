@@ -9,7 +9,11 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+  isBurgerMenuOpened: boolean;
   ngOnInit() {
+  }
+  getData(result: boolean) {
+    this.isBurgerMenuOpened = result;
   }
 
 }

@@ -1,0 +1,16 @@
+/* button, input{
+    margin-left: 10px
+} */
+
+agm-map {
+    height: 300px;
+  }
+  
+  
+  * {
+    font-family: Lato;
+  }
+  
+  a {
+    color: darkblue;
+  }

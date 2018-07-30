@@ -1,7 +1,7 @@
-
+import { AgmCoreModule } from '@agm/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { NgModule } from '@angular/core';
+import { NgModule, Injector } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -54,6 +54,9 @@ import { CdkTreeModule } from '@angular/cdk/tree';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ExponentialStrengthPipe } from './provolochnaia/pipe/calc.pipe';
 import { SharedModule } from './provolochnaia/pipe/shared.module';
+import { SliderComponent } from './home/slider/slider.component';
+import { createCustomElement } from '@angular/elements';
+import { MapContactComponent } from './contact/map-contact/map-contact.component';
 const appRoutes: Routes = [
   {
     path: 'home',
@@ -92,7 +95,9 @@ const appRoutes: Routes = [
     ProvolochnaiaComponent,
     ProshivnaiaComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    SliderComponent,
+    MapContactComponent
   ],
   imports: [
     SharedModule,
@@ -140,6 +145,9 @@ const appRoutes: Routes = [
     FormsModule,
     BrowserModule,
     HttpClientModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDt8PuGlIVurI-24wZciR5L1m_PEhJS8nA'
+    }),
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
@@ -147,7 +155,9 @@ const appRoutes: Routes = [
     // other imports here
   ],
   entryComponents: [
-    HomeComponent
+    HomeComponent,
+    SliderComponent,
+    MapContactComponent
   ],
   providers: [
     HttpClient
@@ -155,4 +165,9 @@ const appRoutes: Routes = [
   bootstrap: [AppComponent]
 })
 
-export class AppModule { }
+export class AppModule {
+  constructor(private injector: Injector) {
+    const slider = createCustomElement(SliderComponent, { injector });
+    customElements.define('motley-slider', slider);
+  }
+ }
