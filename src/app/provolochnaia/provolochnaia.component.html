@@ -1,39 +1,78 @@
 <app-header></app-header>
 
-<h3>Входные параметры:</h3>
-<br />
-<form class="example-container">
+<div class="provolochnaja">
+  <h2>Когда применяется:</h2>
+  <div>
+    <p style="text-indent: 25px;">Данный вид электроэрозионного оборудования используется для резки и вырезания деталей сложной формы из любых токопроводящих материалов, для получения сквозных отверстий, окон, щелей различного размера и конфигурации.
+    На проволочно-вырезном станке не выполняют операции: получение глухих отверстий, полостей, шлифовка, маркирование.
+      Достоинства электроэрозионной обработки на проволочно-вырезных станках:</p>
+    <ul>
+      <li>отсутствие необходимости изготовления электрода-инструмента для каждой новой операции, что экономит немало средств и времени;</li>
+      <li>более высокая производительность и скорость выполнения работ;</li>
+      <li>меньшая стоимость обработки. Проволока дешевле, чем изготовление электрода-инструмента для прошивного станка.</li>
+    </ul>
 
-  <mat-form-field>
-    <input matInput min="1" value="1" oninput="validity.valid||(value='1');" (change)="onChangeRepeat($event.target.value)" [ngModelOptions]="{standalone: true}"
-      [(ngModel)]=" model.inputFieldValue" placeholder="Периметр контура реза" type="number">
-  </mat-form-field>
+  </div>
+  <h3>Входные параметры:</h3>
+  <br />
+  <form class="example-container">
+  <div class="block">
+    <mat-form-field>
+      <input matInput min="1" value="1" oninput="validity.valid||(value='1');" (change)="onChangeRepeat($event.target.value)" [ngModelOptions]="{standalone: true}"
+             [(ngModel)]=" model.inputFieldValue" placeholder="Периметр контура реза" type="number">
+    </mat-form-field>
 
-  <mat-form-field>
-    <mat-select placeholder="Марка стали" [(ngModel)]="model.markSelect" [ngModelOptions]="{standalone: true}">
-      <mat-option value="2">Цветные металлы</mat-option>
-      <mat-option value="1.5">Твердые сплавы</mat-option>
-      <mat-option value="1">Инструмментные стали</mat-option>
-    </mat-select>
-  </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Марка стали" [(ngModel)]="model.markSelect" [ngModelOptions]="{standalone: true}">
+        <mat-option value="2">Цветные металлы</mat-option>
+        <mat-option value="1.5">Твердые сплавы</mat-option>
+        <mat-option value="1">Инструмментные стали</mat-option>
+      </mat-select>
+    </mat-form-field>
 
-  <mat-form-field>
-    <mat-select placeholder="Толщина стали" [(ngModel)]="model.tolshinaSelect" [ngModelOptions]="{standalone: true}">
+    <mat-form-field>
+      <mat-select placeholder="Толщина стали" [(ngModel)]="model.tolshinaSelect" [ngModelOptions]="{standalone: true}">
 
-      <mat-option value="10">10 мм</mat-option>
-      <mat-option value="5">20 мм</mat-option>
-      <mat-option value="2.5">30 мм</mat-option>
-      <mat-option value="1.5">40 мм</mat-option>
-      <mat-option value="1">50 мм</mat-option>
-      <mat-option value="0.8">60 мм</mat-option>
-      <mat-option value="0.5">80 мм</mat-option>
-      <mat-option value="0.3">90 мм</mat-option>
-      <mat-option value="0.1">100 мм</mat-option>
-    </mat-select>
-  </mat-form-field>
+        <mat-option value="10">10 мм</mat-option>
+        <mat-option value="5">20 мм</mat-option>
+        <mat-option value="2.5">30 мм</mat-option>
+        <mat-option value="1.5">40 мм</mat-option>
+        <mat-option value="1">50 мм</mat-option>
+        <mat-option value="0.8">60 мм</mat-option>
+        <mat-option value="0.5">80 мм</mat-option>
+        <mat-option value="0.3">90 мм</mat-option>
+        <mat-option value="0.1">100 мм</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+    <p>Стоимость (грн): {{2 | exponentialStrength: model.inputFieldValue : model.markSelect: model.tolshinaSelect}}</p>
+  </form>
 
-</form>
-<br />
+  <div class="feedback">
+    <h3>Бесплатная консультация нашего менеджера</h3>
+    <form action="mailto:advanta.metal@gmail.com" method="post">
+      <div class="form-flex">
+        <div class="block-form">
+          <input type="text" placeholder="Имя" name="user-name">
+          <input type="text" placeholder="Телефон" name="user-phone">
+          <input type="email" placeholder="E-mail" name="user-email">
+          <input type="file" name="file" value="Загрузить файл">
+        </div>
+        <textarea name="user-massage" id="feedback-msg" cols="30" rows="10" placeholder="Примечания"></textarea>
+      </div>
+      <button type="submit" name="btn-submit" class="btn-submit">Оставить заявку</button>
+    </form>
+  </div>
 
-<p>Стоимость (грн): {{2 | exponentialStrength: model.inputFieldValue : model.markSelect: model.tolshinaSelect}}</p>
+  <h2>Особенности электроэрозии на проволочно-вырезном станке.</h2>
+  <p style="margin-bottom: 50px; line-height: 25px; text-indent: 25px">
+    В качестве инструмента в проволочном станке используется проволока от 0,1 до 0,3 мм. Диаметр проволоки подбирают в зависимости от поставленной задачи. Материал проволоки: вольфрам, молибден, медь, латунь и др.
+    В том месте заготовки, где необходимо получить окно или отверстие, предварительно просверливают техническое отверстие небольшого диаметра. После закрепления заготовки на столе станка через отверстие продевают проволоку. Во время работы станка проволока движется вдоль контура, непрерывно перематываясь через межэлектродный промежуток. Но резка осуществляется не механическим воздействием проволоки на материал. Разрушение материала происходит под воздействием электрической энергии, проходящей через проволоку, которая выполняет роль проводника.
+    Наличие в станке функции автоматической заправки проволоки позволяет ускорить обработку.
+    Рабочей жидкостью в данном станке является дистиллированная вода, которая служит для охлаждения проволоки и вымывания неиспарившихся микрочастиц расплавленного материала.
+  </p>
+
+
+</div>
+
 <app-footer></app-footer>

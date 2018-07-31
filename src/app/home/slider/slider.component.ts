@@ -15,11 +15,11 @@ export class SliderComponent implements OnInit {
   }
 
   sliderArray = [
-    { img: 'http://bloquo.cc/img/works/1.jpg', alt: '', text: '365 Days Of weddings a year' },
-    { img: 'http://bloquo.cc/img/works/2.jpg', alt: '', text: '365 Days Of weddings a year' },
-    { img: 'http://bloquo.cc/img/works/3.jpg', alt: '', text: '365 Days Of weddings a year' },
-    { img: 'http://bloquo.cc/img/works/4.jpg', alt: '', text: '365 Days Of weddings a year' },
-    { img: 'http://bloquo.cc/img/works/5.jpg', alt: '', text: '365 Days Of weddings a year' }
+    { img: 'http://bloquo.cc/img/works/1.jpg', alt: '', text: '' },
+    { img: 'http://bloquo.cc/img/works/2.jpg', alt: '', text: '' },
+    { img: 'http://bloquo.cc/img/works/3.jpg', alt: '', text: '' },
+    { img: 'http://bloquo.cc/img/works/4.jpg', alt: '', text: '' },
+    { img: 'http://bloquo.cc/img/works/5.jpg', alt: '', text: '' }
   ];
 
   ngOnInit() { }
