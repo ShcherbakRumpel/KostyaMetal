@@ -13,7 +13,7 @@
     <span></span>
     <span></span>
   </div>
-  <a href="#" class="logo-header"><img src="../../assets/img/logo.png" alt="logo site"></a>
+  <a [routerLink]="['/home']" class="logo-header"><img src="../../assets/img/logo.png" alt="logo site"></a>
   <nav class="menu">
     <a [routerLink]="['/home']" [ngClass]="{'active': isHome}">Главная</a>
     <a [routerLink]="['/about']"[ngClass]="{'active': isAbout}">О нас</a>

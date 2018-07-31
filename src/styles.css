@@ -311,8 +311,12 @@ nav.menu {
     z-index:1000;
 }
 
-.feedback input[type="text"], .feedback input[type="email"], .feedback input[type="file"], .feedback textarea {
+.feedback input[type="text"],
+.feedback input[type="email"],
+.feedback input[type="file"],
+.feedback textarea {
     padding: 18px 22px;
+    font-size:15px;
     width: 100%;
     border: 1px solid #d9d9d9;
     display: block;
@@ -511,7 +515,8 @@ footer .logo {
 .provolochnaja .feedback textarea {
     height:296px;
 }
-.provolochnaja > form:hover, .provolochnaja .feedback:hover {
+.provolochnaja > form:hover,
+.provolochnaja .feedback:hover {
     -webkit-box-shadow: 0 0 22px 13px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0 0 22px 13px rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 22px 13px rgba(0, 0, 0, 0.15);
@@ -562,7 +567,9 @@ footer .logo {
     .page-left {
         left:320px;
     }
-    .video-bg h2, .video-bg h2, .video-bg h2 {
+    .video-bg h2,
+    .video-bg h2,
+    .video-bg h2 {
         font-size: 40px;
     }
     .advantages-datails span {
@@ -575,7 +582,9 @@ footer .logo {
         width: 700px;
         margin: 0 auto;
     }
-    .about, .contacts, .provolochnaja {
+    .about,
+    .contacts,
+    .provolochnaja {
         width:700px;
         margin:0 auto;
     }
@@ -593,7 +602,9 @@ footer .logo {
     .example-container .block {
         flex-direction:row;
     }
-    .people-photo, .position, .desc-people {
+    .people-photo,
+    .position,
+    .desc-people {
         width: 33.33333%;
         border-bottom: none;
         border-right:1px solid #d9d9d9;
@@ -613,7 +624,9 @@ footer .logo {
     header .logo-header {
         text-align: left;
     }
-    .about, .contacts, .provolochnaja {
+    .about,
+    .contacts,
+    .provolochnaja {
         width:90%;
         padding:0;
     }
@@ -651,10 +664,12 @@ footer .logo {
         flex-direction:row;
         display: flex;
     }
-    .contacts .ways .map, .contacts .ways .address {
+    .contacts .ways .map,
+    .contacts .ways .address {
         width:48%;
     }
-    .feedback input[type="text"], .feedback input[type="email"] {
+    .feedback input[type="text"],
+    .feedback input[type="email"] {
         margin: 0 0 26px;
     }
     .feedback textarea {
@@ -667,7 +682,8 @@ footer .logo {
         justify-content:space-between;
         align-items:flex-start;
     }
-    .form-flex .block-form, .form-flex textarea {
+    .form-flex .block-form,
+    .form-flex textarea {
         width: 48%;
     }
     .info-footer.logo {
@@ -707,7 +723,11 @@ footer .logo {
     }
 }
 @media (min-width: 1200px) {
-    header, .advantages, .feedback, .contacts, .provolochnaja {
+    header,
+    .advantages,
+    .feedback,
+    .contacts,
+    .provolochnaja {
         width:1000px;
     }
     .block-footer {
