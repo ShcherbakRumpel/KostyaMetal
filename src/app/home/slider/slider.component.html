@@ -1,27 +1,9 @@
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="../../../assets/img/about-1.jpg" style="width:100%">
+  <img class="mySlides" src="../../../assets/img/about-2.jpg" style="width:100%">
+  <img class="mySlides" src="../../../assets/img/about-1.jpg" style="width:100%">
+  <img class="mySlides" src="../../../assets/img/about-2.jpg" style="width:100%">
 
-<div class="container">
-
-  <div class="img-container"  *ngFor="let i of sliderArray; let select = index;"
-       [ngClass]="{'selected': select == selectedIndex}">
-    <img src="{{i.img}}" alt="{{i.alt}}" >
-  </div>
-
-  <!--</div>-->
-  <div [ngStyle]="{'transform': 'translateY('+ transform + '%' +')', 'transition': '.8s'}">
-    <div class="text-container">
-      <div class="page-text" *ngFor="let i of sliderArray;let select = index;" [ngClass]="{'selected': select == selectedIndex}">
-        <h3>{{i.text}}</h3>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<div class="slider">
-  <div class="slide-button-parent-container"  *ngFor="let i of sliderArray; let x =index" (click)="selected(x)" (keypress)="keySelected(x)" >
-     <div class="select-box">
-      <div   class="slide-button" [ngClass]="{'slide-button-select': x == selectedIndex}" >
-      </div>
-     </div>
-  </div>
+  <button class="w3-button w3-black w3-display-left" (click)="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" (click)="plusDivs(1)">&#10095;</button>
 </div>

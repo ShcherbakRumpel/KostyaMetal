@@ -4,42 +4,25 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   selector: 'app-slider',
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.css'],
-  encapsulation: ViewEncapsulation.Native
 })
 export class SliderComponent implements OnInit {
-  selectedIndex: number;
-  transform: number;
-  constructor() {
-    this.selectedIndex = 0;
-    this.transform = 100;
+
+  slideIndex = 1;
+  ngOnInit(): void {
+    this.showDivs(this.slideIndex);
+  }
+  plusDivs = (n) => {
+    this.showDivs(this.slideIndex += n);
   }
 
-  sliderArray = [
-    { img: 'http://bloquo.cc/img/works/1.jpg', alt: '', text: '' },
-    { img: 'http://bloquo.cc/img/works/2.jpg', alt: '', text: '' },
-    { img: 'http://bloquo.cc/img/works/3.jpg', alt: '', text: '' },
-    { img: 'http://bloquo.cc/img/works/4.jpg', alt: '', text: '' },
-    { img: 'http://bloquo.cc/img/works/5.jpg', alt: '', text: '' }
-  ];
-
-  ngOnInit() { }
-
-  selected(x) {
-    this.downSelected(x);
-    this.selectedIndex = x;
-
-  }
-
-  keySelected(x) {
-    this.downSelected(x);
-    this.selectedIndex = x;
-  }
-  downSelected(i) {
-    this.transform = 100 - (i) * 50;
-    this.selectedIndex = this.selectedIndex + 1;
-    if (this.selectedIndex > 4) {
-      this.selectedIndex = 0;
+  private showDivs = (n) => {
+    let i;
+    const x = document.getElementsByClassName('mySlides') as HTMLCollectionOf<HTMLElement>;
+    if (n > x.length) { this.slideIndex = 1; }
+    if (n < 1) { this.slideIndex = x.length; }
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = 'none';
     }
+    x[this.slideIndex - 1].style.display = 'block';
   }
-
 }
